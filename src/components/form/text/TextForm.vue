@@ -1,5 +1,5 @@
 <template>
-  <div class="text-form-wrap">
+  <div class="text-form-wrap" :style="{ width }">
     <template v-if="readOnly">{{ value }}</template>
     <input v-else
            type="text"
@@ -88,6 +88,8 @@ export default {
 }
 
 .text-form {
+  display: inline-block;
+  width: 100%;
   padding: 6px 10px 8px 10px;
   border: solid 1px;
   font-size: 14px;
