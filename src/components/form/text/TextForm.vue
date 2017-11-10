@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <input type="text"
+  <div class="text-form-wrap">
+    <template v-if="readOnly">{{ value }}</template>
+    <input v-else
+           type="text"
            class="text-form"
            :class="{
              'text-form--disabled': disabled,
@@ -10,7 +12,6 @@
            :value="value"
            :maxLength="maxLength"
            :disabled="disabled"
-           :readonly="readOnly"
            @mouseenter="hover = true"
            @mouseleave="hover = false"
            @focus="focus = true"
@@ -82,8 +83,11 @@ export default {
 </script>
 
 <style scoped>
-.text-form {
+.text-form-wrap {
   display: inline-block;
+}
+
+.text-form {
   padding: 6px 10px 8px 10px;
   border: solid 1px;
   font-size: 14px;
