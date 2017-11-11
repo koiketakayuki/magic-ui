@@ -8,8 +8,8 @@ export default {
     }
   },
   methods: {
-    getTheme (color) {
-      return this.theme[color]
+    getTheme (type) {
+      return this.theme[type]
     }
   }
 }
