@@ -12,9 +12,9 @@ import Theme from '~/Theme'
 export default {
   mixins: [Theme],
   props: {
-    type: {
+    background: {
       type: String,
-      default: 'primary'
+      default: 'white'
     },
     border: {
       type: String,
@@ -30,22 +30,13 @@ export default {
     }
   },
   computed: {
-    computedBorder () {
-      return this.isError ? this.type : this.border
-    },
-    background () {
-      return this.isError ? this.theme.errorBackground : this.theme.white
-    },
     style () {
       return {
         width: this.width,
         height: this.height,
-        background: this.background,
-        'border-color': this.getTheme(this.computedBorder)
+        background: this.getTheme(this.background),
+        'border-color': this.getTheme(this.border)
       }
-    },
-    isError () {
-      return this.type === 'error'
     }
   }
 }
@@ -56,6 +47,5 @@ export default {
   display: flex;
   flex-flow: column;
   border: 1px solid;
-  box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.12), 0 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 </style>

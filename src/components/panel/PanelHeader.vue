@@ -10,7 +10,7 @@ import Theme from '~/Theme'
 export default {
   mixins: [Theme],
   props: {
-    type: {
+    background: {
       type: String,
       default: 'primary'
     }
@@ -18,7 +18,7 @@ export default {
   computed: {
     style () {
       return {
-        background: this.getTheme(this.type),
+        background: this.getTheme(this.background),
         color: this.theme.white
       }
     }
@@ -28,9 +28,10 @@ export default {
 
 <style scoped>
 .panel-header {
+  position: relative;
   flex-shrink: 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   padding: 6px 16px;
 }
 </style>

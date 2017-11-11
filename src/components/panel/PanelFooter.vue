@@ -6,6 +6,7 @@
 
 <style scoped>
 .panel-footer {
+  position: relative;
   border-top: 1px solid;
   border-color: inherit;
   flex-shrink: 0;
