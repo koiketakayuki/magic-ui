@@ -1,5 +1,5 @@
 <template>
-  <div :style="style">
+  <div class="flex-box" :style="style">
     <slot></slot>
   </div>
 </template>
