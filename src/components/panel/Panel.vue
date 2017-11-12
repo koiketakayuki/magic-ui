@@ -47,6 +47,7 @@ export default {
 <style scoped>
 .panel {
   display: flex;
+  overflow: hidden;
   flex-flow: column;
   border: 1px solid;
 }
