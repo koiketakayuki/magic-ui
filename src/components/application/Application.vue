@@ -5,9 +5,7 @@
          color
         }">
     <slot name="header"></slot>
-    <div class="application-title" :style="{ background: theme.white, color: theme.gray700 }" v-if="title">
-      <h1 class="heading-lv01">{{ title }}</h1>
-    </div>
+    <slot name="title"></slot>
     <slot></slot>
   </div>
 </template>
@@ -34,11 +32,6 @@ export default {
 </script>
 
 <style>
-.application-title {
-  padding: 12px 0 12px 20px;
-  flex-shrink: 0;
-}
-
 .application {
   display: flex;
   flex-flow: column;

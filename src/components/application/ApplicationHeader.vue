@@ -9,22 +9,20 @@
         <slot name="navigation"></slot>
       </mu-inline-list>
     </div>
-    <mu-flex-box justifyContent="flex-end" alignItems="center" width="200px" height="100%">
+    <div class="tooltip">
       <slot name="tooltip"></slot>
-    </mu-flex-box>
+    </div>
   </div>
 </template>
 
 <script>
 import Theme from '~/Theme'
 import MuInlineList from '~/layout/InlineList'
-import MuFlexBox from '~/layout/FlexBox'
 
 export default {
   mixins: [Theme],
   components: {
-    MuInlineList,
-    MuFlexBox
+    MuInlineList
   }
 }
 </script>
