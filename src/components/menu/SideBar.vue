@@ -2,9 +2,7 @@
   <div class="side-bar" :style="{ background: theme.white, width: `${computedWidth}px` }">
     <div class="side-bar__sash" :style="{ background: theme.gray400 }" @mousedown="startResize" v-if="show"></div>
     <slot name="header" v-if="show"></slot>
-    <div class="side-bar__content">
-      <slot v-if="show"></slot>
-    </div>
+    <slot v-if="show"></slot>
   </div>
 </template>
 
@@ -76,9 +74,6 @@ export default {
 <style scoped>
 .side-bar {
   position: relative;
-}
-
-.side-bar__content {
   padding-right: 5px;
 }
 
