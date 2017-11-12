@@ -1,7 +1,9 @@
 <template>
   <div class="panel" :style="style">
     <slot name="header"></slot>
-    <slot></slot>
+    <div class="panel__content">
+      <slot></slot>
+    </div>
     <slot name="footer"></slot>
   </div>
 </template>
@@ -42,10 +44,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .panel {
   display: flex;
   flex-flow: column;
   border: 1px solid;
+}
+
+.panel__content {
+  flex-grow: 1;
 }
 </style>
